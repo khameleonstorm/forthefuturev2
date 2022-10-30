@@ -19,7 +19,19 @@ export default function index({property}) {
 
 
 export async function getStaticPaths() {
-  const paths = [{params: {id: "1"}}, {params: {id: "2"}}]
+  const res = await fetch("https://us-real-estate.p.rapidapi.com/for-sale", {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': process.env.NEW_KEY,
+      'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+    }
+  })
+
+  const properties = await res.json();
+
+  const paths = properties.data.results.map(property => ({
+    params: { id: property.property_id },
+  }))
 
   return { paths, fallback: true }
 }
