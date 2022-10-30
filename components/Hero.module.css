@@ -1,0 +1,118 @@
+.hero{
+  width: 100%;
+}
+
+.mySwiper{
+  width: 100%;
+  height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.swiperslides{
+  width: 100%;
+  position: relative !important;
+}
+
+.context1, .context2, .context3{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  padding-top: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.context2{
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.green{
+  color: #049c92;
+}
+
+.context1 h1, .context2 h1, .context3 h1{
+  font-size: 7rem;
+  color: #faf3e9;
+  letter-spacing: 1px;
+  line-height: 1.05;
+}
+
+.context1 a, .context2 a, .context3 a{
+  width: 170px;
+  padding: 14px 0px;
+  background: #00847C;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  word-spacing: 20px;
+  font-weight: 500;
+  font-size: .8rem;
+  transition: all ease-in-out 0.4s;
+}
+
+.context1 a:hover, .context2 a:hover, .context3 a:hover{
+  transition: all ease-in-out 0.4s;
+  background: bisque;
+  color: black;
+  cursor: pointer;
+  word-spacing: 30px;
+}
+
+
+
+@media only screen and (max-width: 900px){
+  
+.context1 h1, .context2 h1, .context3 h1{
+  font-size: 3.5rem;
+}
+
+}
+
+
+@media only screen and (max-width: 500px){
+
+  .mySwiper{
+    height: 60vh !important;
+  }
+
+  .context1, .context2, .context3{
+    height: 60vh;
+  }
+  
+.context1 h1, .context2 h1, .context3 h1{
+  /* width: 270px; */
+  font-size: 2.3rem;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+
+}
+
+
+@media only screen and (max-width: 380px){
+  
+.context3 h1{
+  font-size: 1.9rem;
+}
+
+}
