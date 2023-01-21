@@ -3,7 +3,7 @@ import { auth, db, storage } from "../firebase/config"
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { doc, setDoc } from "firebase/firestore"
-import useauth from "./useauth"
+import useAuth from "./useAuth"
 import { useRouter } from "next/router"
 import dateFormat from "dateformat";
 
@@ -12,7 +12,7 @@ export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false)
     const [error, setError] = useState(null)
     const [isPending, setIsPending] = useState(false)
-    const { dispatch } = useauth()
+    const { dispatch } = useAuth()
     const router = useRouter()
 
     // 

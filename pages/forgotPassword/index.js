@@ -1,4 +1,4 @@
-import styles from './ForgotPassword.module.css';
+import styles from './forgotPassword.module.css';
 import Navbar from "../../components/Navbar"
 import { useEffect, useState } from 'react';
 import { TextField } from '@mui/material';
