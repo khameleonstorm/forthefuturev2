@@ -1,4 +1,4 @@
-import styles from './signUp.module.css';
+import styles from './signup.module.css';
 import Navbar from "../../components/Navbar"
 import { FormControl, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, TextField } from '@mui/material';
 import {MdVisibilityOff, MdVisibility} from "react-icons/md"
