@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['ap.rdcpix.com', "ar.rdcpix.com", "m.media-amazon.com", "firebasestorage.googleapis.com", "https://s3.tradingview.com/tv.js"], 
   },
   env: {
-    NEW_KEY: "ef9d5738d2msheb4a085b7763886p1b7162jsnf2071a6e9d8b",
+    NEW_KEY: "927782425cmshdee24e4dc61cfcbp162e45jsn1d8a76106b02",
   },
 }
 
