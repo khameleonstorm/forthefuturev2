@@ -1,0 +1,97 @@
+.container{
+  width: 100%;
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.25)), url(../../public/assets/fieldhome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form{
+  width: 45%;
+}
+
+.form h1{
+  font-size: 3.8rem;
+  color: whitesmoke;
+  padding-bottom: 30px;
+}
+
+.form h1 span{
+  color: rgb(0, 158, 147);
+}
+
+.input{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgb(231, 231, 231);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.input input{
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter select{
+  width: 90px;
+  padding: 9px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgb(231, 231, 231);
+}
+
+.filter select option{
+  font-size: 0.8rem;
+}
+
+.filter select option:focus{
+  background: rgba(127, 255, 212, 0.462);
+}
+
+.filter select:hover, .filter select:active{
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  transition: all ease-in-out .3s;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+.hero{
+  height: 60vh;
+}
+
+.form{
+  width: 90%;
+}
+
+.form h1{
+  font-size: 2rem;
+}
+
+}

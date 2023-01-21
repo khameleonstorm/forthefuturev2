@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.container h2{
+  width: 450px;
+  font-size: 2rem;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container h2 span{
+  color: #00cc9d;
+}
+
+.mySwiper{
+  width: 450px;
+  height: 320px;
+}
+
+.text{
+  width: 450px;
+  padding: 30px 0px;
+}
+
+.text h2{
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.863);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text h2 span{
+  font-size: 2rem;
+  color: black;
+}
+
+.text h2 span p{
+  display: inline-block;
+}
+
+.text .date{
+  font-size: 1rem;
+  color: rgba(0, 125, 54, 0.99);
+  word-spacing: 20px;
+}
+
+.text p{
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: sans-serif;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px 0;
+}
+
+.tags p{
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  padding: 7px;
+  background: rgba(0, 230, 192, 0.1);
+  color: rgba(0, 51, 40, 0.7);
+  border-radius: 5px;
+}
+
+.button{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  margin: 5px 0px;
+  font-size: 0.8rem;
+  font-family: 'rosinabold';
+  background: #00cc9d;
+  color: whitesmoke;
+  transition: all ease-in-out .3s;
+}
+
+.button:hover{
+  background: #00847C;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  
+.container h2{
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.mySwiper{
+  width: 100%;
+  height: 320px !important;
+}
+
+.text{
+  width: 100%;
+}
+
+.text h2{
+  font-size: 2rem;
+}
+
+}
