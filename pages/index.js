@@ -16,7 +16,7 @@ export default function Home() {
         <title>For the future, Real Estate and Cryptocurrency</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Navbar showAuth={true} black={false}/>
+      <Navbar showAuth={true}/>
       <Hero />
       <SectionOne />
       <Footer />

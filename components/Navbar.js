@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import logoW from "../public/assets/logoW.svg"
 import logo from "../public/assets/logo.svg"
 import Menu from "./Menu";
 import Image from "next/image"
@@ -45,46 +44,35 @@ export default function Navbar({showAuth, black}) {
 
   return ( 
     <NonSSRWrapper>
-      <div className={navbg ? styles.nav2 : styles.nav}>
-        <nav>
+      <div className={styles.nav} >
           <div className={styles.logo}>     
               <Link href="/">
                 <a>
                     <Image 
-                    src={black || navbg ? logo : logoW} 
+                    src={logo} 
                     alt="logo"
+                    width="100"
+                    height="40"
+                    objectFit="contain"
                     />
                 </a>
               </Link>     
           </div>
 
-          {!user &&
-          <>
-          {showAuth &&
-            <div className={navbg || black ? styles.signup2 : styles.signup}>
-              <Link href="/signup">Sign up</Link>
-              <span></span>
-              <Link href="/login">Login</Link>
-            </div>
-          }
-          </>
-          }
-
-          <Menu black={black} navbg={navbg}/>
+          <Menu black={true}/>
 
           {user && 
             <div className={styles.profile}>
               <div className={styles.image}><Image src={user.photoURL} width={35} height={35} alt="Avatar!"/></div>
-              <MdKeyboardArrowDown size="1.4em" style={(black || navbg) ? {cursor: 'pointer'}: {cursor: 'pointer', color: "white"}} onClick={handleClick}/>
+              <MdKeyboardArrowDown size="2em"/>
               {menu && 
                 <div className={styles.menu} onClick={handleClick}>
                   <Link href="/dashboard">Dashboard</Link>
                   <Link href="/rentHome">Rent a home</Link>
                   <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Cryptocurrency</Link>
-                  <Link href="/stocks">Gold & Jewelry </Link>
                   <Link href="/about">Company</Link>
-                  <Button variant="outlined" color="error" size="small" style={{fontSize: "0.7rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.3em"
+                  <Button variant="outlined" color="error" size="small" style={{fontSize: "1rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.5em"
                   style={{marginLeft: "1rem"}}
                   /></Button>
                 </div>
@@ -94,24 +82,29 @@ export default function Navbar({showAuth, black}) {
 
           {!user && 
             <div className={styles.profile}>
-              <MdKeyboardArrowDown size="1.4em" style={(black || navbg) ? {cursor: 'pointer'}: {cursor: 'pointer', color: "white"}} onClick={handleClick}/>
+              <MdKeyboardArrowDown size="2em" onClick={handleClick}/>
               {menu && 
                 <div className={styles.menu} onClick={handleClick}>
                   <Link href="/rentHome">Rent a home</Link>
                   <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Cryptocurrency</Link>
-                  <Link href="/stocks">Gold & Jewelry </Link>
                   <Link href="/about">Company</Link>
-                  <Button variant="outlined" color="error" size="small" style={{fontSize: "0.7rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.3em"
-                  style={{marginLeft: "1rem"}}
-                  /></Button>
                 </div>
+              }
+              {!user &&
+              <>
+                {showAuth &&
+                  <div className={styles.signup}>
+                    <Link href="/signup">Create Account</Link>
+                  </div>
+                }
+              </>
               }
             </div>
           }
-
-        </nav>
       </div>
     </NonSSRWrapper>
   )
 }
+
+// style={navbg? {position: "sticky"} : {}}

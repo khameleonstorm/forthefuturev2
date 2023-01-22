@@ -43,7 +43,6 @@ export default function DashboardNav({modal, details}) {
             <Link href="/rentHome">Rent a home</Link>
             <Link href="/buyHome">Buy a home</Link>
             <Link href="/invest">Cryptocurrency</Link>
-            <Link href="/stocks">Gold & Jewelry </Link>
             <a onClick={() => modal(true)}>Withdraw</a>
             <a onClick={handleContact}>Contact</a>
             <Button variant="outlined" color="error" size="small" style={{fontSize: "0.7rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.3em"

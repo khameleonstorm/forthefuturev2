@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px 0px;
+  flex-shrink: 0;
 }
 
 .container2{
@@ -13,6 +14,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px 0px;
+  flex-shrink: 0;
 }
 
 .imgcard{
@@ -57,8 +59,9 @@
 }
 
 .text p{
-  font-size: .8rem;
+  font-size: .9rem;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .border{

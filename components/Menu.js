@@ -1,9 +1,9 @@
 import Link from "next/link"
 import styles from "./Menu.module.css"
 
-export default function Menu({black, navbg}) {
+export default function Menu() {
   return (
-    <div className={black || navbg ? styles.container2 : styles.container} >
+    <div className={styles.container} >
       <div className={styles.links}>
         <Link href="/">Home</Link>
         <span></span>
@@ -18,10 +18,6 @@ export default function Menu({black, navbg}) {
       </div>
       <div className={styles.links}>
         <Link href="/invest">Cryptocurrency</Link>
-        <span></span>
-      </div>
-      <div className={styles.links}>
-        <Link href="/stocks">Stocks</Link>
         <span></span>
       </div>
       <div className={styles.links}>
