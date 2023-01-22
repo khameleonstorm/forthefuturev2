@@ -19,8 +19,9 @@
 .signup a{
   background-color: #D7FF36;
   color: black;
-  padding: 13px 20px;
-  border-radius: 30px;
+  padding: 13px 25px;
+  border-radius: 40px;
+  font-weight: 400;
 }
 
 .profile svg{
