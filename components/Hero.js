@@ -15,13 +15,18 @@ import Image from "next/image"
 import cryptoBG from "../public/assets/cryptobg.jpg"
 import { IoPlay } from "react-icons/io5"
 import { BsArrowRight } from "react-icons/bs"
-
-
-
-
+import { useRouter } from "next/router";
 
 
 export default function Hero() {
+  const router = useRouter()
+
+  const handleRoute = (e) => {
+    router.push(e)
+  }
+
+
+
   return (
     <div className={styles.hero}>
       <Swiper
@@ -47,7 +52,7 @@ export default function Hero() {
             <div className={styles.context1}>
               <h1>RENT & OWN PROPERTIES</h1>
               <div className={styles.links}>
-              <a href="#" className={styles.btn1}>
+                <a href="#" className={styles.btn1}  onClick={() => handleRoute("rentHome")}>
                   <BsArrowRight className={styles.circle}/>Explore
                 </a>
                 <a href="#" className={styles.btn2}>
@@ -63,7 +68,7 @@ export default function Hero() {
             <div className={styles.context2}>
               <h1>INVEST IN CRYPTO</h1>
               <div className={styles.links}>
-                <a href="#" className={styles.btn1}>
+                <a href="#" className={styles.btn1}  onClick={() => handleRoute("invest")}>
                   <BsArrowRight className={styles.circle}/>Explore
                 </a>
                 <a href="#" className={styles.btn2}>
