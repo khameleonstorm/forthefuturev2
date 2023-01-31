@@ -31,15 +31,6 @@ export default function Navbar({showAuth, black}) {
     window.addEventListener("scroll", handleNavbg)
   }, [])
 
-  const handleClick = () => {
-    if (menu) {
-      setMenu(false)
-    }
-    if (!menu) {
-      setMenu(true)
-    }
-  }
-
 
 
   return ( 
@@ -62,11 +53,11 @@ export default function Navbar({showAuth, black}) {
           <Menu black={true}/>
 
           {user && 
-            <div className={styles.profile}>
-              <div className={styles.image}><Image src={user.photoURL} width={35} height={35} alt="Avatar!"/></div>
+            <div className={styles.profile} onClick={() => setMenu(!menu)}>
+              <div className={styles.image}><Image src={user.photoURL} width={35} height={35} objectFit="cover" alt="Avatar!"/></div>
               <MdKeyboardArrowDown size="2em"/>
               {menu && 
-                <div className={styles.menu} onClick={handleClick}>
+                <div className={styles.menu}>
                   <Link href="/dashboard">Dashboard</Link>
                   <Link href="/rentHome">Rent a home</Link>
                   <Link href="/buyHome">Buy a home</Link>
@@ -82,9 +73,9 @@ export default function Navbar({showAuth, black}) {
 
           {!user && 
             <div className={styles.profile}>
-              <MdKeyboardArrowDown size="2em" onClick={handleClick}/>
+              <MdKeyboardArrowDown size="2em" onClick={() => setMenu(!menu)}/>
               {menu && 
-                <div className={styles.menu} onClick={handleClick}>
+                <div className={styles.menu}>
                   <Link href="/rentHome">Rent a home</Link>
                   <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Cryptocurrency</Link>
@@ -94,7 +85,7 @@ export default function Navbar({showAuth, black}) {
               {!user &&
               <>
                 {showAuth &&
-                  <div className={styles.signup}>
+                  <div className={styles.signup} >
                     <Link href="/signup">Create Account</Link>
                   </div>
                 }
@@ -106,5 +97,3 @@ export default function Navbar({showAuth, black}) {
     </NonSSRWrapper>
   )
 }
-
-// style={navbg? {position: "sticky"} : {}}

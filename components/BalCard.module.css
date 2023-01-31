@@ -19,6 +19,10 @@
   padding: 15px;
 }
 
+.card:nth-child(3){
+  display: none;
+}
+
 .icons{
   display: flex;
   flex-direction: column;
@@ -41,11 +45,13 @@
 .text h2{
   color: whitesmoke;
   font-size: 2.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .text p{
   color: rgba(255, 255, 255, 0.35);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-family: "trinidad_neue_blackregular";
 }
 
@@ -84,16 +90,42 @@
 
 .card{
   width: 49%;
-  height: 120px;
-  padding: 10px;
+  height: 80px;
+  padding: 5px 7px;
+  border-radius: 10px;
+  margin: 3px 0;
+}
+
+.card:nth-child(1){
+  width: 100%;
+  height: 100px;
+  border-radius: 12px;
+  padding: 8px 10px;
 }
 
 .icons a{
   font-size: 1.5rem;
+  padding-top: 7px;
 }
 
 .text h2{
-  font-size: 7vw;
+  font-size: 7.2vw;
+}
+
+.card:nth-child(1) .icons a{
+  font-size: 2rem;
+}
+
+.card:nth-child(1) .icons{
+  font-size: 1.5rem;
+}
+
+.card:nth-child(1) .text h2{
+  font-size: 10vw;
+}
+
+.card:nth-child(1) .text p{
+  font-size: 1.2rem;
 }
 
 }

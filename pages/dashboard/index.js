@@ -12,6 +12,7 @@ import { useRouter } from "next/router"
 import Profile from '../../components/Profile'
 import Funding from '../../components/Funding'
 import History from '../../components/History'
+import MoonLoader from "react-spinners/MoonLoader"
 
 
 
@@ -23,11 +24,11 @@ export default function Index() {
   const [profile, setProfile] = useState(false)
   const [funding, setFunding] = useState(false)
   const [history, setHistory] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [dashboard, setDashboard] = useState(true)
 
 
-  useEffect(()=>{
-    
+  useEffect(()=>{   
     if(user){
       if(user.email === "admin@gmail.com"){
         router.push("/admin")
@@ -40,13 +41,14 @@ export default function Index() {
           snapshot.forEach(doc => {
             setUserDetails({ ...doc.data(), id: doc.id})
           })
+          setIsLoading(false)
       })
 
 
     } else{
       router.push('/login')
     }
-  }, [user, router])
+  }, [user, router, userDetails])
 
 const view = (event) =>{
   if (event === "dashboard") {
@@ -82,41 +84,51 @@ const view = (event) =>{
   }
 }
 
-
-
-
-  return (user &&
-      <div className={styles.container}>
-        {modal && <Modal modal={setModal}/>}
-        <div className={styles.sidebar}>
-          <SideNav dashboard={dashboard} profile={profile} history={history} funding={funding} view={view}/>
-        </div>
-        <div className={styles.main}>
-          {dashboard &&
-            <>
-              <DashboardNav modal={setModal} details={userDetails}/>
-              <BalCard bal={userDetails.bal} />
-              <Charts />
-            </>
-          }
-          {profile && 
-            <Profile details={userDetails} bal={userDetails.bal} view={view}/>
-          }
-
-          {funding &&
-            <>
-              <DashboardNav modal={setModal} details={userDetails}/>
-              <Funding view={view}/>
-            </>
-          }
-
-          {history &&
-            <>
-              <DashboardNav modal={setModal} details={userDetails}/>
-              <History/>
-            </>
-          }
-        </div>
+if(isLoading){
+  return (
+    <div className={styles.spinnerContainer}>
+      <div className={styles.spinner}>
+        <MoonLoader color="#1649ff" />
       </div>
+    </div>
   )
+}
+
+if(!isLoading){
+  return (
+  <div className={styles.container}>
+    {modal && <Modal modal={setModal}/>}
+    <div className={styles.sidebar}>
+      <SideNav dashboard={dashboard} profile={profile} history={history} funding={funding} view={view}/>
+    </div>
+    <div className={styles.main}>
+      {dashboard &&
+        <>
+          <DashboardNav modal={setModal} details={userDetails}/>
+          <BalCard bal={userDetails.bal} />
+          <Charts />
+        </>
+      }
+      {profile && 
+        <Profile details={userDetails} bal={userDetails.bal} view={view}/>
+      }
+
+      {funding &&
+        <>
+          <DashboardNav modal={setModal} details={userDetails}/>
+          <Funding view={view}/>
+        </>
+      }
+
+      {history &&
+        <>
+          <DashboardNav modal={setModal} details={userDetails}/>
+          <History/>
+        </>
+      }
+    </div>
+  </div>
+  )
+}
+
 }

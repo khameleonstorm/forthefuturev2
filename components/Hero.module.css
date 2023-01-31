@@ -116,3 +116,11 @@
   }
 
 }
+
+
+@media only screen and (max-width: 390px){
+  .btn2{
+    display: none;
+  }
+
+}
