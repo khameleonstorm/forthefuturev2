@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
   const properties = await res.json();
 
-  const paths = properties.data.results.map(property => ({
+  const paths = properties.data?.results.map(property => ({
     params: { id: property.property_id.toString() },
   }))
 
