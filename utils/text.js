@@ -302,16 +302,16 @@ export const wallet = [
   {
     id: 2,
     title: "Ethereum",
-    network: "ETH",
+    network: "Erc 20",
     address: "0x96a1B418bdD1C4580FA2bBD388398f7E14D3b8Dc",
     link: "https://link.trustwallet.com/send?address=0x96a1B418bdD1C4580FA2bBD388398f7E14D3b8Dc&asset=c60",
   },
   {
     id: 3,
-    title: "BNB",
-    network: "BNB",
-    address: "bnb16x26el433xhn0qmys7rv8lxvxqqmexfhgty8ux",
-    link: "https://link.trustwallet.com/send?address=bnb16x26el433xhn0qmys7rv8lxvxqqmexfhgty8ux&asset=c714",
+    title: "USDT",
+    network: "Erc 20",
+    address: "0x96a1B418bdD1C4580FA2bBD388398f7E14D3b8Dc",
+    link: "https://link.trustwallet.com/send?address=0x96a1B418bdD1C4580FA2bBD388398f7E14D3b8Dc&asset=c60",
   },
 ];
 

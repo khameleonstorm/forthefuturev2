@@ -76,11 +76,11 @@ export default function Funding() {
         </FormControl>
 
         <div className={styles.qr}>
-            <Image priority src="/assets/qr1.jpeg" width={200} height={200} layout='responsive' alt="QR code"/>
+            <Image priority src={`/assets/qr${coin+1}.jpg`} width={200} height={200} layout='responsive' alt="QR code"/>
             <input
             type="text"
             ref={textAreaRef}
-            defaultValue={wallet[coin].address}
+            value={wallet[coin].address}
             disabled
             />
         </div>
