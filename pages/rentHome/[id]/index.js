@@ -29,12 +29,17 @@ export async function getStaticPaths() {
   })
 
   const properties = await res.json();
+  if(properties.status !== 200) return { paths: [], fallback: "blocking" }
 
-  const paths = properties.data?.results.map(property => ({
+  if(!properties.data.results) return { paths: [], fallback: "blocking" }
+
+  if(properties.status === 200) {
+  const paths = properties.data.results.map(property => ({
     params: { id: property.property_id.toString() },
   }))
 
   return { paths, fallback: "blocking" }
+}
 }
 
 
