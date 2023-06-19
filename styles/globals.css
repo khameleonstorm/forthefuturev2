@@ -70,3 +70,22 @@ p{
   padding: 10px 0px;
   transition: all ease-in-out 0.4s;
 }
+
+
+.btn{
+  width: 100%;
+  padding: 19px 0;
+  background: linear-gradient(140deg, rgb(64, 29, 186) 60%, rgb(130, 91, 240) 40%);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: all ease-out .4s;
+}
+
+.btn:hover{
+  background: linear-gradient(140deg,rgb(130, 91, 240) 60%, rgb(64, 29, 186) 40%);
+}

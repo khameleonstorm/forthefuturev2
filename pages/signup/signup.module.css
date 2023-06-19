@@ -60,24 +60,6 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-.btn{
-  width: 100%;
-  padding: 17px 0;
-  background: #D7FF36;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: sans-serif;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.btn:hover{
-  background: #bdff2d;
-}
-
 .checkbox{
   display: flex;
   align-items: center;

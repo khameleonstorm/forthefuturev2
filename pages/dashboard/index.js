@@ -27,6 +27,15 @@ export default function Index() {
   const [isLoading, setIsLoading] = useState(true)
   const [dashboard, setDashboard] = useState(true)
 
+      
+  useEffect(() => {
+    const chatDiv = document.getElementById('tidio-chat')
+    if(chatDiv) chatDiv.style.display = 'none'
+
+    return () => {
+      if(chatDiv) chatDiv.style.display = 'block'
+    }
+  }, [])
 
   useEffect(()=>{   
     if(user){

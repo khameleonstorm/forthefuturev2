@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import InvestmentCard from "../../components/InvestmentCard";
 import { plans } from "../../utils/text"
-import Contact from "../../components/Contact"
 
 
 export default function Index() {
@@ -24,7 +23,6 @@ export default function Index() {
       </div>
       <InvestmentCard plans={plans}/>
       <Footer />
-      <Contact />
     </div>
   )
 }

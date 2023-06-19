@@ -5,7 +5,7 @@ import Footer from '../../components/Footer'
 import { FaSearchLocation } from "react-icons/fa"
 import Properties from '../../components/Properties'
 import { useState, useEffect } from "react"
-import Contact from "../../components/Contact"
+import { detriotHouses } from '../../utils/text'
 
 
 export default function Index({properties, error}) {
@@ -14,10 +14,10 @@ export default function Index({properties, error}) {
 
 
   useEffect(() => {
+    console.log(detriotHouses)
     if(properties.status === 200){
       setProps(properties.data.results)
-      console.log(properties)
-    }
+    } else setProps(detriotHouses.data.results)
   }, [properties])
 
   const handleChange = (e) => {
@@ -27,7 +27,9 @@ export default function Index({properties, error}) {
       setProps(properties.data.results.filter(property => {
         return property.permalink.toLowerCase().includes(inputValue.toLowerCase())
       }))
-    }
+    } else setProps(detriotHouses.data.results.filter(property => {
+      return property.permalink.toLowerCase().includes(inputValue.toLowerCase())
+    }))
   };
 
 
@@ -45,7 +47,6 @@ export default function Index({properties, error}) {
       </div>
       {!(props.lenght === 0) && <Properties props={props} error={error} rent={false}/>}
       <Footer />
-      <Contact />
     </div>
   )
 }

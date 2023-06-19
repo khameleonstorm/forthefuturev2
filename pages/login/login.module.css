@@ -27,24 +27,6 @@
   height: 18px;
 }
 
-.btn{
-  width: 100%;
-  padding: 17px 0;
-  background: #D7FF36;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: sans-serif;
-  cursor: pointer;
-  transition: all .3s ease;
-}
-
-.btn:hover{
-  background: #bdff2d;
-}
-
 .link, .link2{
   text-align: center;
   font-size: 0.9rem;

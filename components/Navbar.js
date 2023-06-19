@@ -62,6 +62,7 @@ export default function Navbar({showAuth, black}) {
                   <Link href="/rentHome">Rent a home</Link>
                   <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Invest</Link>
+                  <Link href="/stocks">Stocks</Link>
                   <Link href="/about">Company</Link>
                   <Button variant="outlined" color="error" size="small" style={{fontSize: "1rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.5em"
                   style={{marginLeft: "1rem"}}

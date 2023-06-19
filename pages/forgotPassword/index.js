@@ -49,8 +49,8 @@ export default function ForgotPassword() {
         <h1>Reset Password</h1>
         <TextField id="email" label="Email" variant="outlined" onChange={handleChange("email")}/>
 
-        {!isPending && <button className={styles.btn}>Reset</button>}
-        {isPending && <button disabled className={styles.btn} style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
+        {!isPending && <button className="btn">Reset</button>}
+        {isPending && <button disabled className="btn" style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         {successMessage && <p className={styles.success}>{successMessage}</p>}
         {formError.email && <p className={styles.error}>{formError.email}</p>}

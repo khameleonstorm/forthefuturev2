@@ -17,7 +17,11 @@ export default function Menu() {
         <span></span>
       </div>
       <div className={styles.links}>
-        <Link href="/invest">Cryptocurrency</Link>
+        <Link href="/invest">CryptoCurrency</Link>
+        <span></span>
+      </div>
+      <div className={styles.links}>
+        <Link href="/stocks">Stocks</Link>
         <span></span>
       </div>
       <div className={styles.links}>

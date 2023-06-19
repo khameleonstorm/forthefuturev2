@@ -1,7 +1,6 @@
 import Footer from "../../../components/Footer"
 import Navbar from "../../../components/Navbar"
 import PropertyDetails from "../../../components/PropertyDetails"
-import Contact from "../../../components/Contact"
 
 export default function detailsPage({property}) {
 
@@ -11,7 +10,6 @@ export default function detailsPage({property}) {
       <Navbar showAuth={true} black={true}/>
        <PropertyDetails details={property}/>
       <Footer />
-      <Contact />
     </>
   )
 }

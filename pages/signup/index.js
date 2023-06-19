@@ -289,8 +289,8 @@ export default function Index() {
         {formError.emailChecked && <p className={styles.error}>{formError.emailChecked}</p>}
         {error && <p className={styles.error}>{error}</p>}
 
-        {!isPending && <button className={styles.btn}>Sign Up</button>}
-        {isPending && <button disabled className={styles.btn} style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
+        {!isPending && <button className="btn">Sign Up</button>}
+        {isPending && <button disabled className="btn" style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
         
       <Link href="/login" className={styles.link}>Already have an account? Login</Link>
       </form>

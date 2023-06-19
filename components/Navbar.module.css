@@ -17,11 +17,17 @@
 }
 
 .signup a{
-  background-color: #D7FF36;
-  color: black;
+  background: linear-gradient(135deg, rgb(64, 29, 186), rgb(130, 91, 240));
+  color: rgb(255, 255, 255);
   padding: 13px 25px;
   border-radius: 40px;
-  font-weight: 400;
+  font-weight: 300;
+  transition: all ease-out .5s;
+  cursor: pointer;
+}
+
+.signup a:hover{
+  background: linear-gradient(250deg, rgb(64, 29, 186), rgb(130, 91, 240));
 }
 
 .profile svg{

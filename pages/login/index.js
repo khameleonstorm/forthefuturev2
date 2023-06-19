@@ -109,8 +109,8 @@ export default function Login() {
           />
         </FormControl>
 
-        {!isPending && <button className={styles.btn}>Login</button>}
-        {isPending && <button disabled className={styles.btn} style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
+        {!isPending && <button className="btn">Login</button>}
+        {isPending && <button disabled className="btn" style={{opacity: "50%"}}><PulseLoader color='#000000' size={10}/> </button>}
         {error && <p className={styles.error}>{error}</p>}
         
       <Link href="/signup" className={styles.link}>No Account?</Link>

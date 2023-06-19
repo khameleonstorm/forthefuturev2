@@ -29,6 +29,15 @@ export default function Index() {
   const [ stocksWithdraw, setStocksWithdraw ] = useState(0)
 
 
+      
+  useEffect(() => {
+    const chatDiv = document.getElementById('tidio-chat')
+    if(chatDiv) chatDiv.style.display = 'none'
+
+    return () => {
+      if(chatDiv) chatDiv.style.display = 'block'
+    }
+  }, [])
 
   useEffect(()=>{
     if(user){
