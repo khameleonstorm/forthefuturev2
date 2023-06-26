@@ -73,6 +73,7 @@
 .wrp, .wrp2{
   flex-direction: column-reverse;
   padding: 50px 10px;
+  gap: 50px;
 }
   
 .imgcard{
@@ -100,11 +101,7 @@
 }
 
 .text p{
-  font-size: .9rem;
-  font-weight: lighter;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.4;
-  padding-bottom: 30px;
+  font-size: 1rem;
 }
 
 }
