@@ -1,5 +1,5 @@
 import future from "../public/assets/future.jpg";
-import nightHomeMobile from "../public/assets/nightHomeMobile.webp";
+import nightHomeMobile from "../public/assets/nighthomeMobile.webp";
 import cryptopiggy from "../public/assets/cryptopiggy.jpg";
 import diamondhand from "../public/assets/holdingdiamond.jpg";
 
