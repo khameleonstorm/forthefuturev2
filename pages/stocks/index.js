@@ -5,7 +5,7 @@ import InvestmentCard from "../../components/InvestmentCard";
 import { plans2 } from "../../utils/text"
 import { useState } from "react";
 import Fashion from "../../components/Fashion"
-import Contact from "../../components/Contact"
+import WhatsAppBtn from "../../components/WhatsAppBtn";
 
 
 export default function Index() {
@@ -34,7 +34,7 @@ export default function Index() {
         <InvestmentCard plans={plans} stock={true}/>
         <Fashion />
         <Footer />
-        <Contact />
+        <WhatsAppBtn />
     </div>
   )
 }

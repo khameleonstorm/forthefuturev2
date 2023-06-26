@@ -1,5 +1,5 @@
 import future from "../public/assets/future.jpg";
-import keyhand from "../public/assets/keyhand.jpg";
+import nightHomeMobile from "../public/assets/nightHomeMobile.webp";
 import cryptopiggy from "../public/assets/cryptopiggy.jpg";
 import diamondhand from "../public/assets/holdingdiamond.jpg";
 
@@ -7,35 +7,27 @@ export  const texts = [
   {
     id: 1,
     title: "WHY CHOOSE US?",
-    desc: "We enhance our clients’ experiences and provide them with the right tools, unbiased advice, and specialists for each service, we established a structure unlike traditional real estate companies and other investment companies. Furthermore, buyers will have access to a plethora of services and specialists for post-home purchasing assistance, cryptocurrency and stock investment",
-    reversed: true,
-    imageUrl: future,
-    background: "#EDFFF1"
+    desc: "We enhance our clients experiences and provide them with the right tools, unbiased advice, and specialists for each service, we established a structure unlike traditional real estate companies and other investment companies. Furthermore, buyers will have access to a plethora of services and specialists for post-home purchasing assistance, cryptocurrency and stock investment",
+    imageUrl: future
   },
   {
     id: 2,
     title: "OWN A HOME!",
     desc: "Real estate purchase could be very problematic and likely the largest investments in your life, it is important that you select the right agent, know the neighborhoods, and thoroughly understand the real estate transaction process. Our agents’ knowledge and training makes them experts in negotiating the best purchase price for our clients.",
-    reversed: false,
-    imageUrl: keyhand,
-    background: "#ffe4c466"
+    imageUrl: nightHomeMobile
   },
   {
     id: 3,
-    title: "CRYPTOCURRENCY INVESTMENT",
+    title: "CRYPTO INVESTMENT",
     desc: "4Dfuture trading engine has been designed to meet the highest online-trading industry standards. All systems have been uniquely coded to minimize latency and increase order execution speed. System automatically monitors all buying power factor, maximum order size, maximum position size after every order placement. 4Dfuture prides itself on having one of the most advanced and reliable trading software on the market.",
-    reversed: true,
-    imageUrl: cryptopiggy,
-    background: "#BAFFC9"
+    imageUrl: cryptopiggy
  
   },
   {
     id: 4,
     title: "INVEST IN GOLD & ETFs ",
     desc: "Stock traders demand speed, reliability, and flexibility. Our platforms deliver, and our team of experts is eager to help you along the way.",
-    reversed: false,
-    imageUrl: diamondhand,
-    background: "#FDF6F5",
+    imageUrl: diamondhand
   }
 ]
 

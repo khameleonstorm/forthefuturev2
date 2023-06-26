@@ -13,9 +13,10 @@ import styles from "./Hero.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image"
 import cryptoBG from "../public/assets/cryptobg.jpg"
-import { IoPlay } from "react-icons/io5"
-import { BsArrowRight } from "react-icons/bs"
+import nightHomeBG from "../public/assets/nighthome.jpg"
+import jeweryBG from "../public/assets/jewelryBg.jpg"
 import { useRouter } from "next/router";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 
 export default function Hero() {
@@ -47,34 +48,29 @@ export default function Hero() {
         >
           <SwiperSlide className={styles.swiperslides}>
             <div className={styles.img}>
-              <Image priority src="/assets/nighthome.jpg" layout="fill" objectFit="cover" alt="nightHome"/>
+              <Image priority src={nightHomeBG} layout="fill" objectFit="cover" alt="nightHome"/>
             </div>
-            <div className={styles.context1}>
-              <h1>RENT & OWN PROPERTIES</h1>
-              <div className={styles.links}>
-                <a href="#" className={styles.btn1}  onClick={() => handleRoute("rentHome")}>
-                  <BsArrowRight className={styles.circle}/>Explore
-                </a>
-                <a href="#" className={styles.btn2}>
-                  <IoPlay /> About us
-                </a>
-              </div>
+            <div className={styles.context}>
+              <h1>Rent & Own Properties</h1>
+              <button onClick={() => handleRoute("/rentHome")}><span>Rent</span><HiArrowNarrowRight /></button>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslides}>
             <div className={styles.img}>
-              <Image placeholder="blur" src={cryptoBG} layout="fill" objectFit="cover" alt="nightHome"/>
+              <Image placeholder="blur" src={cryptoBG} layout="fill" objectFit="cover" alt="cryptocurrency"/>
             </div>
-            <div className={styles.context2}>
-              <h1>INVEST IN CRYPTO</h1>
-              <div className={styles.links}>
-                <a href="#" className={styles.btn1}  onClick={() => handleRoute("invest")}>
-                  <BsArrowRight className={styles.circle}/>Explore
-                </a>
-                <a href="#" className={styles.btn2}>
-                  <IoPlay /> About us
-                </a>
-              </div>
+            <div className={styles.context}>
+              <h1>Invest In Crypto</h1>
+              <button onClick={() => handleRoute("/invest")}><span>Invest</span><HiArrowNarrowRight /></button>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiperslides}>
+            <div className={styles.img}>
+              <Image placeholder="blur" src={jeweryBG} layout="fill" objectFit="cover" alt="jewelry and gold"/>
+            </div>
+            <div className={styles.context}>
+              <h1>Buy Gold & Jewelry</h1>
+              <button onClick={() => handleRoute("/stocks")}><span>Buy</span><HiArrowNarrowRight /></button>
             </div>
           </SwiperSlide>
         </Swiper>

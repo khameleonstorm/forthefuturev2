@@ -1,0 +1,30 @@
+.ctn{
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  z-index: 100000;
+}
+
+.ctn a{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ctn svg{
+  color: rgb(0, 255, 51);
+  font-size: 3rem;
+}
+
+.ctn svg:hover{
+  color: rgb(173, 255, 189);
+}
+
+.ctn p{
+  font-size: .8rem;
+  font-weight: 400;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}

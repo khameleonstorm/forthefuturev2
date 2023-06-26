@@ -6,6 +6,7 @@ import { FaSearchLocation } from "react-icons/fa"
 import Properties from '../../components/Properties'
 import { useState, useEffect } from "react"
 import { detriotHouses } from '../../utils/text'
+import WhatsAppBtn from '../../components/WhatsAppBtn'
 
 
 export default function Index({properties, error}) {
@@ -47,6 +48,7 @@ export default function Index({properties, error}) {
       </div>
       {!(props.lenght === 0) && <Properties props={props} error={error} rent={false}/>}
       <Footer />
+      <WhatsAppBtn />
     </div>
   )
 }

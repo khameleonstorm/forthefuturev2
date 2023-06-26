@@ -2,6 +2,7 @@ import styles from "./about.module.css"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import { about } from "../../utils/text"
+import WhatsAppBtn from "../../components/WhatsAppBtn"
 
 export default function Index() {
   const aboutUs = about[0]
@@ -48,6 +49,7 @@ export default function Index() {
         </div>
       </section>
       <Footer />
+      <WhatsAppBtn />
     </div>
   )
 }

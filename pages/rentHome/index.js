@@ -7,6 +7,7 @@ import { useState, useEffect } from "react"
 import { locs } from "../../utils/text"
 import { BiFilter } from "react-icons/bi"
 import { useRouter } from 'next/router'
+import WhatsAppBtn from "../../components/WhatsAppBtn"
 
 export default function Index({properties, error}) {
   const [inputValue, setInputValue] = useState('')
@@ -64,6 +65,7 @@ export default function Index({properties, error}) {
         </div>
         {props && <Properties props={props} error={error} rent={true}/>}
         <Footer />
+        <WhatsAppBtn />
       </div>
   )
 }
