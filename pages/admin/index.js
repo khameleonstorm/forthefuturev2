@@ -31,7 +31,7 @@ export default function Index() {
 
       
   useEffect(() => {
-    const chatDiv = document.getElementById('tidio-chat')
+    const chatDiv = document?.getElementById('tidio-chat')
     if(chatDiv) chatDiv.style.display = 'none'
 
     return () => {

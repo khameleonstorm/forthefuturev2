@@ -22,7 +22,7 @@ export default function Users({document, error, isPending, filter}) {
       document.map((user) => 
         <div className={styles.users} key={user.uid} onClick={() => filter(user.email)}>
             <div className={styles.img}>
-              <Image priority src={user.photoURL ? user.photoURL : IMG} width={33} height={33} objectFit='cover' objectPosition="center" alt="avatar" style={{borderRadius: "50%"}}/>
+              <Image priority src={user.photoURL ? user?.photoURL : IMG} width={33} height={33} objectFit='cover' objectPosition="center" alt="avatar" style={{borderRadius: "50%"}}/>
             </div>
             <p>{user.displayName}</p>
         </div>
