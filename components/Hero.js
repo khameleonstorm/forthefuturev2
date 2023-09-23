@@ -13,8 +13,6 @@ import styles from "./Hero.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image"
 import cryptoBG from "../public/assets/cryptobg.jpg"
-import nightHomeBG from "../public/assets/nighthome.jpg"
-import jeweryBG from "../public/assets/jewelryBg.jpg"
 import { useRouter } from "next/router";
 import { HiArrowNarrowRight } from "react-icons/hi";
 

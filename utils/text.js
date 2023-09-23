@@ -39,7 +39,7 @@ export  const texts = [
 export const plans = [
   {
     id: 1,
-    amount: "$100 - $1000",
+    amount: "$1000",
     title: "Regular",
     desc: "Suitable for all",
     falsepoints: ["Deposit fee"],
