@@ -13,7 +13,7 @@ import NonSSRWrapper from "../utils/nossr";
 
 
 
-export default function Navbar({showAuth, black}) {
+export default function Navbar({showAuth}) {
   const { user } = useAuth()
   const [navbg, setNavbg] = useState(false)
   const { logout } = useLogout()
@@ -59,10 +59,7 @@ export default function Navbar({showAuth, black}) {
               {menu && 
                 <div className={styles.menu}>
                   <Link href="/dashboard">Dashboard</Link>
-                  <Link href="/rentHome">Rent a home</Link>
-                  <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Invest</Link>
-                  <Link href="/stocks">Stocks</Link>
                   <Link href="/about">Company</Link>
                   <Button variant="outlined" color="error" size="small" style={{fontSize: "1rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.5em"
                   style={{marginLeft: "1rem"}}
@@ -77,8 +74,6 @@ export default function Navbar({showAuth, black}) {
               <MdKeyboardArrowDown size="2em" onClick={() => setMenu(!menu)}/>
               {menu && 
                 <div className={styles.menu}>
-                  <Link href="/rentHome">Rent a home</Link>
-                  <Link href="/buyHome">Buy a home</Link>
                   <Link href="/invest">Invest</Link>
                   <Link href="/about">Company</Link>
                 </div>

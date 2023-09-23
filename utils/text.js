@@ -36,7 +36,7 @@ export  const texts = [
 export const plans = [
   {
     id: 1,
-    amount: "$100 - $1k",
+    amount: "$100 - $1000",
     title: "Regular",
     desc: "Suitable for all",
     falsepoints: ["Deposit fee"],
@@ -45,8 +45,8 @@ export const plans = [
   },
   {
     id: 2,
-    title: "Pro",
-    amount: "$1k - $10k",
+    title: "Basic",
+    amount: "$3500 - $10,000",
     desc: "Increased yield percentage",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Mining Period: 120hrs", "Yield per month: 25%", "Yield per day: 0.83%", "Trading Signal"],
@@ -54,8 +54,8 @@ export const plans = [
   },
   {
     id: 3,
-    amount: "$15k - $1m",
-    title: "Fixed",
+    amount: "$15,000 - $20,000",
+    title: "Professional",
     desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Mining Period: 6months - 2yrs", "Yield per month: 45% - 55%", "Yield per day: 1.5%"],
@@ -63,36 +63,31 @@ export const plans = [
   },
   {
     id: 4,
-    amount: "30k - 15m",
-    title: "Supreme/ Joint Investment plan",
+    amount: "$30 - $500,000",
+    title: "Masters",
     desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
-    background: "#00847C",     
-  },
-]
-
-
-
-export const plans2 = [
-  {
-    id: 1,
-    title: "Basic",
-    amount: "$1k+",
-    desc: "Max yield percentage",
-    falsepoints: ["Management fee", "Deposit fee", "Limited profits"],
-    truepoints: ["Personalized Portfolio", "Auto Renew", "Yield per month: 128%", "Yield per day: 4.3%"],
-    background: "#FFE600",   
+    background: "#11AE00",     
   },
   {
-    id: 2,
-    amount: "$100k+",
-    title: "Plus",
-    desc: "Increased yield percentage",
+    id: 5,
+    amount: "$50,000 - $1m",
+    title: "Fixed",
+    desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
-    truepoints: ["Personalized Portfolio", "Trading Signal", "Defi insights", "Yield per month: 450%", "Yield per day: 15.0%"],
-    background: "#00847C",     
-  }
+    truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
+    background: "#00EB7C",     
+  },
+  {
+    id: 6,
+    amount: "$60,000 - $10m",
+    title: "Joint Investment",
+    desc: "Exclusive benifits and privileges",
+    falsepoints: ["Management fee", "Deposit fee"],
+    truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
+    background: "#C00000",     
+  },
 ]
 
 

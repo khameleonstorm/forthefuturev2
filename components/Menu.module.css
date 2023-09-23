@@ -31,22 +31,12 @@
 }
 
 .links:nth-child(2):hover span{
-  width: 65px;
+  width: 90px;
   background: bisque;
 }
 
 .links:nth-child(3):hover span{
-  width: 60px;
-  background: bisque;
-}
-
-.links:nth-child(4):hover span{
-  width: 75px;
-  background: bisque;
-}
-
-.links:nth-child(5):hover span{
-  width: 32px;
+  width: 35px;
   background: bisque;
 }
 
