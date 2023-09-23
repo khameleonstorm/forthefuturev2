@@ -48,29 +48,11 @@ export default function Hero() {
         >
           <SwiperSlide className={styles.swiperslides}>
             <div className={styles.img}>
-              <Image priority src={nightHomeBG} layout="fill" objectFit="cover" alt="nightHome"/>
-            </div>
-            <div className={styles.context}>
-              <h1>Rent & Own Properties</h1>
-              <button onClick={() => handleRoute("/rentHome")}><span>Rent</span><HiArrowNarrowRight /></button>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiperslides}>
-            <div className={styles.img}>
               <Image placeholder="blur" src={cryptoBG} layout="fill" objectFit="cover" alt="cryptocurrency"/>
             </div>
             <div className={styles.context}>
               <h1>Invest In Crypto</h1>
               <button onClick={() => handleRoute("/invest")}><span>Invest</span><HiArrowNarrowRight /></button>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiperslides}>
-            <div className={styles.img}>
-              <Image placeholder="blur" src={jeweryBG} layout="fill" objectFit="cover" alt="jewelry and gold"/>
-            </div>
-            <div className={styles.context}>
-              <h1>Buy Gold & Jewelry</h1>
-              <button onClick={() => handleRoute("/stocks")}><span>Buy</span><HiArrowNarrowRight /></button>
             </div>
           </SwiperSlide>
         </Swiper>

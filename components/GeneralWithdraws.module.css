@@ -1,0 +1,45 @@
+.container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 80px 20px 0 0;
+  animation-name: slideIn;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transition: all ease;
+  z-index: 100000;
+}
+
+.card{
+  padding: 5px 20px 5px 30px;
+  background: #000000b1;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 4px;
+}
+
+@keyframes slideIn {
+  0%{ transform: translateX(-0%)}
+  30%{ transform: translateX(-0%)}
+  60%{ transform: translateX(100%)}
+  80%{ transform: translateX(100%)}
+  100%{ transform: translateX(-0%)}
+}
+
+.card h3{
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.2rem;
+  color: #62ff00;
+}
+
+.card p{
+  font-size: .75rem;
+  font-weight: 300;
+  color: white;
+}
+
+.date, .recent{
+  font-size: .6rem !important;
+  color: #ffffff5d !important;
+}

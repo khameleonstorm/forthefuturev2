@@ -2,7 +2,7 @@ import s from "./SectionOne.module.css";
 import Image from "next/image";
 
 
-const SectionOne = ({ video, reversed, data }) => {
+const SectionOne = ({ reversed, data }) => {
 
   return (
       <div className={s.ctn} style={reversed? {background: "white"} : {}}>
@@ -10,7 +10,9 @@ const SectionOne = ({ video, reversed, data }) => {
           <div className={s.imgcard}>
             <div className={s.imgbg}>
               <div className={s.img}>
-                <Image loading="eager" src={data.imageUrl} layout="fill" objectFit="cover" alt="invest" />
+                {!data.video && <Image loading="eager" src={data.url} layout="fill" objectFit="cover" alt="invest" />}
+
+                {data.video && <iframe className={s.iframe} src={data.url} title={data.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>}
               </div>
             </div>
           </div>
@@ -25,3 +27,8 @@ const SectionOne = ({ video, reversed, data }) => {
 }
 
 export default SectionOne
+
+
+// <video autoPlay loop style={{ width: '500px', height: '500px' }}>
+// <source src="/blue.mp4" />
+// </video>

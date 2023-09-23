@@ -8,6 +8,8 @@ import Head from 'next/head'
 import { plans, texts } from '../utils/text' 
 import WhatsAppBtn from '../components/WhatsAppBtn'
 import InvestmentCard from '../components/InvestmentCard'
+import GeneralWithdraws from '../components/GeneralWithdraws'
+import { withdrawals } from '../utils/text'
 
 export default function Home() {
 
@@ -26,6 +28,7 @@ export default function Home() {
       <InvestmentCard plans={plans}/>
       <Footer />
       <WhatsAppBtn />
+      <GeneralWithdraws withdrawals={withdrawals}/>
     </div>
   )
 }

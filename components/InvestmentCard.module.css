@@ -1,16 +1,17 @@
 .container{
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 100px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   gap: 40px;
-  background: white;
 }
 
 .card{
-  width: 250px;
+  width: 280px;
   min-height: 400px;
   border-radius: 20px;
   padding: 45px 20px 30px 20px;
@@ -109,6 +110,6 @@
 
 @media screen and (max-width: 500px){ 
 .card{
-  width: 290px;
+  width: 90%;
 }
 }

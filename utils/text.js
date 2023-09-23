@@ -7,29 +7,32 @@ export  const texts = [
   {
     id: 1,
     title: "WHY CHOOSE US?",
-    desc: "We enhance our clients experiences and provide them with the right tools, unbiased advice, and specialists for each service, we established a structure unlike traditional real estate companies and other investment companies. Furthermore, buyers will have access to a plethora of services and specialists for post-home purchasing assistance, cryptocurrency and stock investment",
-    imageUrl: future
+    desc: "We enhance our clients experiences and provide them with the right tools, unbiased advice, and specialists for each service, we established a structure unlike traditional real estate companies and other investment companies. Furthermore, buyers will have access to a plethora of services and specialists for post-coin purchasing assistance, cryptocurrency and stock investment",
+    url: future
   },
   {
     id: 2,
-    title: "OWN A HOME!",
-    desc: "Real estate purchase could be very problematic and likely the largest investments in your life, it is important that you select the right agent, know the neighborhoods, and thoroughly understand the real estate transaction process. Our agents’ knowledge and training makes them experts in negotiating the best purchase price for our clients.",
-    imageUrl: nightHomeMobile
+    title: "WHAT IS CRYPTOCURRENCY",
+    desc: "Cryptocurrency is a digital or virtual form of money that uses cryptography for security. It operates on decentralized blockchain technology, enabling secure and transparent peer-to-peer transactions. Cryptocurrencies like Bitcoin and Ethereum are not controlled by any central authority, making them immune to government interference and offering potential benefits like borderless transactions and investment opportunities.",
+    url: "https://www.youtube-nocookie.com/embed/NDetuRLQso8?si=4DToq6lR6DScUWxS",
+    video: true
   },
   {
     id: 3,
     title: "CRYPTO INVESTMENT",
     desc: "4Dfuture trading engine has been designed to meet the highest online-trading industry standards. All systems have been uniquely coded to minimize latency and increase order execution speed. System automatically monitors all buying power factor, maximum order size, maximum position size after every order placement. 4Dfuture prides itself on having one of the most advanced and reliable trading software on the market.",
-    imageUrl: cryptopiggy
+    url: cryptopiggy
  
   },
   {
     id: 4,
-    title: "INVEST IN GOLD & ETFs ",
-    desc: "Stock traders demand speed, reliability, and flexibility. Our platforms deliver, and our team of experts is eager to help you along the way.",
-    imageUrl: diamondhand
+    title: "WHY INVEST IN CRYPTOCURRENCY? ",
+    desc: "Investing in cryptocurrency can offer potential benefits such as diversification, potential for long-term growth, and accessibility. Cryptocurrencies operate on decentralized technology, offering transparency and security. However, it's essential to research and understand the market before investing to make informed decisions.",
+    url: "https://www.youtube-nocookie.com/embed/eJfN9bR1Ox0?si=bPY9hLeZGXb4LPv3&amp;start=38",
+    video: true
   }
 ]
+
 
 
 
@@ -68,7 +71,7 @@ export const plans = [
     desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
-    background: "#11AE00",     
+    background: "#62ff00",     
   },
   {
     id: 5,
@@ -77,7 +80,7 @@ export const plans = [
     desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
-    background: "#00EB7C",     
+    background: "#3c5e83",     
   },
   {
     id: 6,
@@ -86,7 +89,7 @@ export const plans = [
     desc: "Exclusive benifits and privileges",
     falsepoints: ["Management fee", "Deposit fee"],
     truepoints: ["Personalized Portfolio", "Trading Signal", "Mining Period: 6months - 5yrs", "Yield per month: 75% - 90%", "Yield per day: 2.5%"],
-    background: "#C00000",     
+    background: "#825bf0",     
   },
 ]
 
@@ -112,8 +115,93 @@ export const about = [
     "Our Investment Advisory Committee are recognized thought leaders in the investment community. They play an advisory role in Wealthsimple's investment management process and serve as a sounding board for 4thefuture's management team."
   ]  
   },
-
 ]
+
+
+
+
+export const withdrawals = [
+  {
+    name: "Gisela Heidi",
+    country: "Germany",
+    time: "2 Hours ago"
+  },
+  {
+    name: "Karl Axel",
+    country: "Germany",
+    time: "1 Hour ago"
+  },
+  {
+    name: "Carmen Alberto",
+    country: "Spain",
+    time: "4 Hours ago"
+  },
+  {
+    name: "Duarte João",
+    country: "Portugal",
+    time: "1 Hour ago"
+  },
+  {
+    name: "Charlotte Jonas",
+    country: "Germany",
+    time: "3 Hours ago"
+  },
+  {
+    name: "Luis Guilherme",
+    country: "Portugal",
+    time: "9 Hours ago"
+  },
+  {
+    name: "Huan Bao",
+    country: "China",
+    time: "8 Hours ago"
+  },
+  {
+    name: "Margarida Emilio",
+    country: "Portugal",
+    time: "1 Hour ago"
+  },
+  {
+    name: "Fernanda Alexandre",
+    country: "Portugal",
+    time: "4 Hours ago"
+  },
+  {
+    name: "Cai Chung",
+    country: "China",
+    time: "2 Hours ago"
+  },
+  {
+    name: "Diego Javier",
+    country: "Portugal",
+    time: "5 Hours ago"
+  },
+  {
+    name: "Wilson Miller",
+    country: "United States",
+    time: "10 Hours ago"
+  },
+  {
+    name: "Zhào Wáng",
+    country: "China",
+    time: "2 Hours ago"
+  },
+  {
+    name: "Duke Stone",
+    country: "United States",
+    time: "2 Hours ago"
+  },
+  {
+    name: "Harry Bill",
+    country: "Canada",
+    time: "2 Hours ago"
+  },
+  {
+    name: "Kang Chao xing",
+    country: "China",
+    time: "2 Hours ago"
+  },
+];
 
 
 export const locs = [
