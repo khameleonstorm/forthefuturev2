@@ -5,11 +5,12 @@ import Navbar from '../components/Navbar'
 import SectionOne from '../components/SectionOne'
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
-import { plans, texts } from '../utils/text' 
+import { plans, testimonials, texts } from '../utils/text' 
 import WhatsAppBtn from '../components/WhatsAppBtn'
 import InvestmentCard from '../components/InvestmentCard'
 import GeneralWithdraws from '../components/GeneralWithdraws'
 import { withdrawals } from '../utils/text'
+import Testimonials from '../components/Testimonials'
 
 export default function Home() {
 
@@ -26,6 +27,7 @@ export default function Home() {
       <SectionOne data={texts[2]}/>
       <SectionOne data={texts[3]} reversed={true}/>
       <InvestmentCard plans={plans}/>
+      <Testimonials data={testimonials}/>
       <Footer />
       <WhatsAppBtn />
       <GeneralWithdraws withdrawals={withdrawals}/>

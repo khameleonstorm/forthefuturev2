@@ -72,7 +72,10 @@ export default function Funding() {
 
             <MenuItem value={0}>Bitcoin</MenuItem>
             <MenuItem value={1}>Ethereum</MenuItem>
-            <MenuItem value={2}>BNB</MenuItem>
+            <MenuItem value={2}>USDT</MenuItem>
+            <MenuItem value={3}>DOGE</MenuItem>
+            <MenuItem value={4}>TRX</MenuItem>
+            <MenuItem value={5}>BNB</MenuItem>
           </Select>
         </FormControl>
 

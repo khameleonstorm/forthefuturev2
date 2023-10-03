@@ -18,11 +18,8 @@ export default function Footer() {
             <span></span>
           </div>
           <div className={styles.links}>
-            <Link href="/">Buy a home</Link>
-            <Link href="/">Rent a home</Link>
-            <Link href="/">Cryptocurrency</Link>
-            <Link href="/">Gold mining</Link>
-            <Link href="/">ETFs</Link>
+            <Link href="/invest">Cryptocurrency</Link>
+            <Link href="/invest">Invest</Link>
           </div>
         </div>
         <div className={styles.company}>
@@ -31,9 +28,9 @@ export default function Footer() {
             <span></span>
           </div>
           <div className={styles.links}>
-            <Link href="/">About-Us</Link>
-            <Link href="/">Summary</Link>
-            <Link href="/">T&C</Link>
+            <Link href="/about">About-Us</Link>
+            <Link href="/about">Summary</Link>
+            <Link href="/about">T&C</Link>
           </div>
         </div>
         <div className={styles.contact}>

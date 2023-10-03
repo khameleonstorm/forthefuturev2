@@ -13,6 +13,7 @@ import styles from "./Hero.module.css";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image"
 import cryptoBG from "../public/assets/cryptobg.jpg"
+import cryptoBG2 from "../public/assets/cryptobg2.jpg"
 import { useRouter } from "next/router";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
@@ -50,6 +51,16 @@ export default function Hero() {
             </div>
             <div className={styles.context}>
               <h1>Invest In Crypto</h1>
+              <button onClick={() => handleRoute("/invest")}><span>Invest</span><HiArrowNarrowRight /></button>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className={styles.swiperslides}>
+            <div className={styles.img}>
+              <Image placeholder="blur" src={cryptoBG2} layout="fill" objectFit="cover" alt="cryptocurrency"/>
+            </div>
+            <div className={styles.context}>
+              <h1>Best Way To Save</h1>
               <button onClick={() => handleRoute("/invest")}><span>Invest</span><HiArrowNarrowRight /></button>
             </div>
           </SwiperSlide>
