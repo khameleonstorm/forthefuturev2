@@ -16,10 +16,6 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, [active, withdrawals.length]);
 
-useEffect(() => {
-
-}, [])
-
 const { name } = withdrawals[active];
 
 

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>For the future, Real Estate and Cryptocurrency</title>
+        <title>For the future</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar showAuth={true}/>
