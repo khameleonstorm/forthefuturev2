@@ -58,9 +58,9 @@ export default function BalCard({bal}) {
   }
 
 
-  return (
+  return (bal[0] &&
     <>
-      {(mobile && bal[0]) &&
+      {mobile &&
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small" className={styles.form}>
         <InputLabel id="demo-select-small">Portfolio</InputLabel>
           <Select
@@ -86,13 +86,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.deposit}</h2>
-            <p>{bal[0]?.title} Deposit</p>
+            <h2>${bal[0].deposit}</h2>
+            <p>{bal[0].title} Deposit</p>
           </div>
         </div> 
 
@@ -101,13 +101,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.profit}</h2>
-            <p>{bal[0]?.title} Profits</p>
+            <h2>${bal[0].profit}</h2>
+            <p>{bal[0].title} Profits</p>
           </div>
         </div>
 
@@ -116,13 +116,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.withdraw}</h2>
-            <p>{bal[0]?.title} Withdraws</p>
+            <h2>${bal[0].withdraw}</h2>
+            <p>{bal[0].title} Withdraws</p>
           </div>
         </div>
       </div>
@@ -139,13 +139,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.deposit}</h2>
-            <p>{bal[0]?.title} Deposit</p>
+            <h2>${bal[0].deposit}</h2>
+            <p>{bal[0].title} Deposit</p>
           </div>
         </div> 
         }
@@ -157,13 +157,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.profit}</h2>
-            <p>{bal[0]?.title} Profits</p>
+            <h2>${bal[0].profit}</h2>
+            <p>{bal[0].title} Profits</p>
           </div>
         </div>
         }
@@ -176,13 +176,13 @@ export default function BalCard({bal}) {
             <a>
               <SiCashapp />
             </a>
-            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0]?.deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {profit && <MdShowChart size="1.5em" style={{ color: bal[0]?.profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
-            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0]?.withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {deposit && <MdShowChart size="1.5em" style={{ color: bal[0].deposit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {profit && <MdShowChart size="1.5em" style={{ color: bal[0].profit > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
+            {withdraw && <MdShowChart size="1.5em" style={{ color: bal[0].withdraw > 0 ? 'rgb(0, 233, 155)' : 'red'}}/>}
           </div>
           <div className={styles.text}>
-            <h2>${bal[0]?.withdraw}</h2>
-            <p>{bal[0]?.title} Withdraws</p>
+            <h2>${bal[0].withdraw}</h2>
+            <p>{bal[0].title} Withdraws</p>
           </div>
         </div>
         }
