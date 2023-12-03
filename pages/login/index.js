@@ -6,7 +6,7 @@ import {MdVisibilityOff, MdVisibility} from "react-icons/md"
 import useAuth from '../../hooks/useAuth';
 import { useEffect } from 'react';
 import { PulseLoader } from 'react-spinners';
-import { useRouter } from 'next/router' 
+import { useRouter } from 'next/router';
 import { useLogin } from '../../hooks/useLogin';
 import Link from 'next/link';
 

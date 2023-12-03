@@ -25,7 +25,7 @@ export default function BalCard({bal}) {
       }
     };
 
-    handleResize();
+    handleResize()
 
     window.addEventListener('resize', handleResize);
 
@@ -81,7 +81,7 @@ export default function BalCard({bal}) {
 
       {!mobile &&
       <div className={styles.container}>
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />
@@ -96,7 +96,7 @@ export default function BalCard({bal}) {
           </div>
         </div> 
 
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />
@@ -111,7 +111,7 @@ export default function BalCard({bal}) {
           </div>
         </div>
 
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />
@@ -134,7 +134,7 @@ export default function BalCard({bal}) {
       {mobile &&
       <div className={styles.container}>
         {deposit &&
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />
@@ -152,7 +152,7 @@ export default function BalCard({bal}) {
 
 
         {profit &&
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />
@@ -171,7 +171,7 @@ export default function BalCard({bal}) {
 
 
         {withdraw &&
-        <div className={styles.card} key={bal[0]?.id}>
+        <div className={styles.card}>
           <div className={styles.icons}>
             <a>
               <SiCashapp />

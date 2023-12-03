@@ -124,7 +124,7 @@ export default function Index() {
       return
     }
 
-    if(values.image === {} || values.image === undefined) {
+    if(values.image === undefined) {
       setFormError({...formError, image: "Image is invalid"});
       return
     }
