@@ -60,7 +60,7 @@ export default function BalCard({bal}) {
 
   return (
     <>
-      {mobile &&
+      {(mobile && bal[0]) &&
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small" className={styles.form}>
         <InputLabel id="demo-select-small">Portfolio</InputLabel>
           <Select
