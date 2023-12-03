@@ -58,7 +58,7 @@ export default function BalCard({bal}) {
   }
 
 
-  return (bal[0] &&
+  return (
     <>
       {mobile &&
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small" className={styles.form}>

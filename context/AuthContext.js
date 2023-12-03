@@ -11,7 +11,7 @@ export const AuthReducer = (state, action) => {
         case 'LOGOUT':
             return {...state, user: null}
         case 'AUTHSTATE':
-            return {...state, user: action.payload}
+            return {...state, user: action.payload, authIsReady: true}
     
         default:
             return state
@@ -19,7 +19,7 @@ export const AuthReducer = (state, action) => {
 }
 
 export const AuthProvider = ({children}) => {
-    const [state, dispatch] = useReducer(AuthReducer, {user: auth.currentUser})
+    const [state, dispatch] = useReducer(AuthReducer, {user: null, authIsReady: false})
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {

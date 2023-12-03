@@ -18,8 +18,8 @@ import MoonLoader from "react-spinners/MoonLoader"
 
 export default function Index() {
   const router = useRouter()
-  const { user } = useAuth()
-  const [userDetails, setUserDetails] = useState([])
+  const { user, authIsReady } = useAuth()
+  const [userDetails, setUserDetails] = useState(null)
   const [modal, setModal] = useState(false)
   const [profile, setProfile] = useState(false)
   const [funding, setFunding] = useState(false)
@@ -37,27 +37,29 @@ export default function Index() {
     }
   }, [])
 
-  useEffect(()=>{   
-    if(user){
-      if(user.email === "admin@gmail.com"){
-        router.push("/admin")
+  useEffect(()=>{ 
+    if(authIsReady){  
+      if(user){
+        if(user.email === "admin@gmail.com"){
+          router.push("/admin")
+        }
+        const q = query(collection(db, "profile"), where("email", "==", user.email))
+
+        onSnapshot(q, 
+          (snapshot) => {
+            // looping through snapshot to get each individual doc
+            snapshot.forEach(doc => {
+              setUserDetails({ ...doc.data(), id: doc.id})
+            })
+            setIsLoading(false)
+        })
+
+
+      } else{
+        router.push('/login')
       }
-      const q = query(collection(db, "profile"), where("email", "==", user.email))
-
-      onSnapshot(q, 
-        (snapshot) => {
-          // looping through snapshot to get each individual doc
-          snapshot.forEach(doc => {
-            setUserDetails({ ...doc.data(), id: doc.id})
-          })
-          setIsLoading(false)
-      })
-
-
-    } else{
-      router.push('/login')
     }
-  }, [user, router, userDetails])
+  }, [user])
 
 const view = (event) =>{
   if (event === "dashboard") {
@@ -93,7 +95,7 @@ const view = (event) =>{
   }
 }
 
-if(isLoading){
+if(isLoading && !authIsReady){
   return (
     <div className={styles.spinnerContainer}>
       <div className={styles.spinner}>
@@ -103,7 +105,7 @@ if(isLoading){
   )
 }
 
-if(!isLoading){
+if(!isLoading && userDetails){
   return (
   <div className={styles.container}>
     {modal && <Modal modal={setModal}/>}
@@ -114,7 +116,7 @@ if(!isLoading){
       {dashboard &&
         <>
           <DashboardNav modal={setModal} details={userDetails}/>
-          <BalCard bal={userDetails.bal} />
+          {<BalCard bal={userDetails.bal} />}
           <Charts />
         </>
       }
