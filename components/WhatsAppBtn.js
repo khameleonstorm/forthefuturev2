@@ -4,7 +4,7 @@ import { IoLogoWhatsapp } from "react-icons/io"
 export default function WhatsAppBtn() {
   return (
     <div className={s.ctn}>
-      <a href='https://wa.me/message/TFU7HVOSZ5NRK1'>
+      <a href='https://wa.me/message/VUBDURBLTIA3M1'>
         <IoLogoWhatsapp />
         <p>Contact Us</p>
       </a>

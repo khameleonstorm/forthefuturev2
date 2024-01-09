@@ -1,7 +1,6 @@
 import styles from './DashboardNav.module.css';
 import Image from "next/image"
 import { MdKeyboardArrowDown } from "react-icons/md";
-import Link from 'next/link';
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { HiOutlineLogout } from "react-icons/hi";
@@ -22,7 +21,7 @@ export default function DashboardNav({modal, details}) {
   const handleContact = () => {
     const input = prompt("Are you sure you want to contact me?", "Type 'yes' for confirmation")
     if (input = "yes") {
-      window.location.assign("https://wa.me/message/TFU7HVOSZ5NRK1")
+      window.location.assign("https://wa.me/message/VUBDURBLTIA3M1")
     }
   }
 
