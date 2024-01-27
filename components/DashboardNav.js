@@ -21,7 +21,7 @@ export default function DashboardNav({modal, details}) {
   const handleContact = () => {
     const input = prompt("Are you sure you want to contact me?", "Type 'yes' for confirmation")
     if (input = "yes") {
-      window.location.assign("https://wa.me/message/VUBDURBLTIA3M1")
+      window.location.assign("https://wa.me/message/OKQAJVXJ4ECWE1")
     }
   }
 
