@@ -1,30 +1,32 @@
-import styles from './DashboardNav.module.css';
-import Image from "next/image"
+import styles from "./DashboardNav.module.css";
+import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useState } from 'react';
-import Button from '@mui/material/Button';
+import { useState } from "react";
+import Button from "@mui/material/Button";
 import { HiOutlineLogout } from "react-icons/hi";
-import { useLogout } from "../hooks/useLogout"
+import { useLogout } from "../hooks/useLogout";
 
-export default function DashboardNav({modal, details}) {
-  const { logout } = useLogout()
-  const [menu, setMenu] = useState(false)
+export default function DashboardNav({ modal, details }) {
+  const { logout } = useLogout();
+  const [menu, setMenu] = useState(false);
 
   const handleClick = () => {
     if (menu) {
-      setMenu(false)
+      setMenu(false);
     }
     if (!menu) {
-      setMenu(true)
+      setMenu(true);
     }
-  }
+  };
   const handleContact = () => {
-    const input = prompt("Are you sure you want to contact me?", "Type 'yes' for confirmation")
-    if (input = "yes") {
-      window.location.assign("http://wa.me/17326319035")
+    const input = prompt(
+      "Are you sure you want to contact me?",
+      "Type 'yes' for confirmation",
+    );
+    if ((input = "yes")) {
+      window.location.assign("http://wa.me/19782291366");
     }
-  }
-
+  };
 
   return (
     <div className={styles.container}>
@@ -34,19 +36,37 @@ export default function DashboardNav({modal, details}) {
       </div>
       <div className={styles.logo}>
         <div className={styles.image}>
-          <Image priority src={details.photoURL ? details.photoURL : '/assets/future.jpg'} layout="fill" objectFit="cover" alt="Avatar!" />
+          <Image
+            priority
+            src={details.photoURL ? details.photoURL : "/assets/future.jpg"}
+            layout="fill"
+            objectFit="cover"
+            alt="Avatar!"
+          />
         </div>
-        <MdKeyboardArrowDown size="1.3em" style={{cursor: 'pointer'}} onClick={handleClick}/>
-        {menu && 
+        <MdKeyboardArrowDown
+          size="1.3em"
+          style={{ cursor: "pointer" }}
+          onClick={handleClick}
+        />
+        {menu && (
           <div className={styles.menu} onClick={handleClick}>
             <a onClick={() => modal(true)}>Withdraw</a>
             <a onClick={handleContact}>Contact</a>
-            <Button variant="outlined" color="error" size="small" style={{fontSize: "0.7rem"}} onClick={logout}> Logout <HiOutlineLogout size="1.3em"
-            style={{marginLeft: "1rem"}}
-            /></Button>
+            <Button
+              variant="outlined"
+              color="error"
+              size="small"
+              style={{ fontSize: "0.7rem" }}
+              onClick={logout}
+            >
+              {" "}
+              Logout{" "}
+              <HiOutlineLogout size="1.3em" style={{ marginLeft: "1rem" }} />
+            </Button>
           </div>
-        }
+        )}
       </div>
     </div>
-  )
+  );
 }
